@@ -12,6 +12,7 @@ if [[ ! -s "$BITCOIN_DATA/bitcoin.conf" ]]; then
     rpcuser=${RPCUSER:-btcuser}
     rpcpassword=${RPCPASSWORD:-saintpetersburg}
     rpcport=${RPCPORT:-8332}
+    onlynet=ipv4
 		EOF
 		chown bitcoin:bitcoin "$BITCOIN_DATA/bitcoin.conf"
 fi
