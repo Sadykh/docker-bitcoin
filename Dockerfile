@@ -1,11 +1,11 @@
-FROM ubuntu:17.04
+FROM ubuntu:18.10
 
 RUN groupadd -r bitcoin && useradd -r -m -g bitcoin bitcoin
 
 RUN set -ex \
 	&& apt-get update \
 	&& apt-get install -qq --no-install-recommends ca-certificates dirmngr gosu gpg wget \
-  software-properties-common python-software-properties \
+  software-properties-common \
 	&& rm -rf /var/lib/apt/lists/* \
   && add-apt-repository ppa:bitcoin/bitcoin \
   && apt-get update \
